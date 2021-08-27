@@ -1,0 +1,63 @@
+<div class="user">
+
+<div class="user__title">
+  <p class="headline" *ngIf="show">Let's play</p>
+  <p class="headline" *ngIf="!show">About you</p>
+</div>
+
+<div class="desc"    *ngIf="show">
+<p    >Tell me something about you...<p>
+ <p> When you click save it will stay an integral part of
+  this page</p>
+  <p>even after reboot</p>
+</div>
+
+<!--************************************************ FORM ***********************************************************-->
+
+  <div id="form" *ngIf="show">
+    <div class="sex">
+    <!--form: sex-->
+    <label  >Choose your sex</label>
+    <mat-radio-group aria-label="Sex" [(ngModel)]="sex">
+      <mat-radio-button value="male">male</mat-radio-button>
+      <mat-radio-button value="female">female</mat-radio-button>
+    </mat-radio-group>
+    </div>
+    <!--    form: name-->
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput ngModel name="name" required [(ngModel)]="name" >
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Age</mat-label>
+      <input type="number" matInput ngModel name="age" required [(ngModel)]="age">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Profession</mat-label>
+      <input type="text" matInput ngModel name="name" required [(ngModel)]="pro">
+    </mat-form-field>
+
+  </div>
+<div   >
+  <button  mat-raised-button color="primary" (click)="onSave()" *ngIf="show"  >Save</button>
+</div>
+
+  <!--********************************************** Description *************************************************************-->
+  <div id="user"  >
+    <div>
+      <img *ngIf="sex==='female'" src="assets/woman.png" alt="female">
+      <img *ngIf="sex==='male'" src="assets/man.png" alt="man">
+    </div>
+    <div class="print desc">
+      <p *ngIf="name!=''">So your name is {{name}}</p>
+      <br>
+      <p  *ngIf="age!=''">and you are a {{age}} years old {{pro?.toLowerCase()}}</p>
+    </div>
+  </div>
+  <button mat-raised-button (click)="onReset()" color="accent" *ngIf="!show"  >reset</button>
+
+<!--********************************************** Save *************************************************************-->
+
+</div>

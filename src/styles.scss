@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+$primary-color: #222831;
+$text-color: #393E46;
+$head: #EEEEEE;
+$secondary-color: #00ADB5;
+
+
+html, body {
+  height: 100%;
+  font-family: 'Inconsolata', monospace;
+}
+
+body {
+  background-image:
+       url("assets/back-opaci.png" ) ;
+ color: rgba(9, 162, 255, 0.9);
+  margin: 0;
+  font-family: Roboto,
+  "Helvetica Neue", sans-serif;
+   font-size: 60%;
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:white;
+
+
+
+}
+
+.headline {
+  font-family: 'Inconsolata', monospace !important;
+
+  color: $head;
+  font-size: 3.5rem !important;;
+
+}
+
+.desc {
+  font-family: 'Inconsolata', monospace !important;
+
+  font-size: 2rem;
+  line-height: 3rem;
+}
+/* Responsive Full Background Image Using CSS
+ * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
+*/
+
+
+/* For mobile devices */
+

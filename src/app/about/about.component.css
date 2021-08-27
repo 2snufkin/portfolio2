@@ -1,0 +1,11 @@
+.contain{
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 10rem;
+
+}
+.me {
+  width: 80vw;
+
+}
+

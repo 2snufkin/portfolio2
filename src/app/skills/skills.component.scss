@@ -1,0 +1,59 @@
+
+.card{
+
+  border-radius: 25px;
+  height: 350px ;
+   width: 251px ;
+  margin-left: 130px;
+  margin-top: 50px ;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+.card:hover{
+  animation: hide 10s;
+  animation-fill-mode: forwards;
+
+}
+.icon{
+   height: 65px ;
+  border-radius:  25px  ;
+
+
+
+}
+.body{
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top{
+  border-radius: 25px 0 0 0;
+}
+p{
+   /*font-family: 'Ubuntu Mono', monospace;*/
+  font-weight: bold;
+  font-size: 3.5em;
+  color: white;
+  text-shadow:2px 2px black;
+
+}
+.flip-horizontally {
+  transform: rotate(180deg);
+  float: right;
+  border-radius: 25px  0 0 0;
+
+}
+
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: hidden;
+
+
+  }
+}

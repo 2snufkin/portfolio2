@@ -1,0 +1,45 @@
+<mat-grid-list cols="2" rowHeight="300px" >
+
+  <mat-grid-tile colspan="2">
+    <p  class="headline"> Write me something...</p>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <form  (ngSubmit)="onsubmit(contact)" #contact=ngForm class="contact-form"  >
+      <!--email -->
+
+      <mat-form-field class="full-width"  appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput name="email" placeholder="Ex. pat@example.com" ngModel  required  >
+
+        <mat-error *ngIf="contact.hasError('email') && !contact.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="contact.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!--  subject-->
+      <mat-form-field class="full-width"  appearance="fill">
+        <mat-label>Subject</mat-label>
+        <input type="text" matInput ngModel name="subject" required>
+
+        <mat-error *ngIf="contact.hasError('required')">
+          Subject is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Ex. Hi Pini..." ngModel name="message" required ></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" type="submit" [disabled]="contact.invalid">Send</button>
+    </form>
+  </mat-grid-tile>
+
+  <mat-grid-tile  >
+   <img src="assets/mail.png " >
+  </mat-grid-tile>
+</mat-grid-list>

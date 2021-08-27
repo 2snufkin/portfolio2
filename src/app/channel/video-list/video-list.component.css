@@ -1,0 +1,9 @@
+.list{
+  display: flex;
+  justify-content: space-between;
+  background-color: #F45B69;
+  margin-top: 5rem;
+
+}
+app-video-single{
+}

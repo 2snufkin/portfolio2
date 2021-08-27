@@ -1,0 +1,28 @@
+#form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+
+}
+.user{
+  width: 80vw;
+  padding: 5rem 10rem;
+
+}
+#user{
+  display: flex;
+}
+.user__title{
+  margin-bottom: 2rem;
+}
+mat-radio-button{
+  padding:1.5rem;
+}
+.sex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom{
+
+}
