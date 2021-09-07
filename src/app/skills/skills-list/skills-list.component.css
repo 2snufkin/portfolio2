@@ -6,6 +6,12 @@
 }
 app-skills{
   list-style: none;
-  flex: 0 0 25%;
+  flex: 0 0 20%;
 
+}
+.list{
+  background-image: url("/src/assets/tools.png")!important;
+}
+.space{
+  margin: 45px;
 }

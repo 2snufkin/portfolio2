@@ -1,5 +1,5 @@
 <div class="user">
-
+<div class="user-left">
 <div class="user__title">
   <p class="headline" *ngIf="show">Let's play</p>
   <p class="headline" *ngIf="!show">About you</p>
@@ -43,12 +43,13 @@
 <div   >
   <button  mat-raised-button color="primary" (click)="onSave()" *ngIf="show"  >Save</button>
 </div>
+</div>
 
   <!--********************************************** Description *************************************************************-->
-  <div id="user"  >
+  <div id="user-right"  >
     <div>
-      <img *ngIf="sex==='female'" src="assets/woman.png" alt="female">
-      <img *ngIf="sex==='male'" src="assets/man.png" alt="man">
+      <img class="user-img" *ngIf="sex==='female'" src="assets/woman.jpg" alt="female">
+      <img class="user-img" *ngIf="sex==='male'" src="assets/man.jpg" alt="man">
     </div>
     <div class="print desc">
       <p *ngIf="name!=''">So your name is {{name}}</p>
@@ -61,3 +62,4 @@
 <!--********************************************** Save *************************************************************-->
 
 </div>
+<p>{{sex | json}}</p>

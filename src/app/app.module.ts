@@ -31,6 +31,10 @@ import {TitleComponent} from './nav-bar/title/title.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {PortfolioSingleComponent} from './portfolio/portfolio-single/portfolio-single.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {AngularTypewriterEffectModule} from 'angular-typewriter-effect';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -47,7 +51,9 @@ import {PortfolioSingleComponent} from './portfolio/portfolio-single/portfolio-s
     VideoListComponent,
     SkillsListComponent,
     PortfolioComponent,
-    PortfolioSingleComponent
+    PortfolioSingleComponent,
+    HobbiesComponent,
+    TestComponent
 
 
   ],
@@ -70,6 +76,8 @@ import {PortfolioSingleComponent} from './portfolio/portfolio-single/portfolio-s
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MatDialogModule,
+    FontAwesomeModule,
+    AngularTypewriterEffectModule
 
   ],
   providers: [],

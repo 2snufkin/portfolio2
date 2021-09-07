@@ -2,8 +2,8 @@
 .card{
 
   border-radius: 25px;
-  height: 350px ;
-   width: 251px ;
+  height: 245px ;
+   width: 157px ;
   margin-left: 130px;
   margin-top: 50px ;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -14,24 +14,26 @@
   animation-fill-mode: forwards;
 
 }
-.icon{
+.card__icon{
    height: 65px ;
   border-radius:  25px  ;
 
 
 
 }
-.body{
+.card__title{
   height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.card__title--lang{
+  font-size: 1.8rem;
+}
 .top{
   border-radius: 25px 0 0 0;
 }
 p{
-   /*font-family: 'Ubuntu Mono', monospace;*/
   font-weight: bold;
   font-size: 3.5em;
   color: white;

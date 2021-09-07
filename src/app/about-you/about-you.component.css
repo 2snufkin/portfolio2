@@ -5,9 +5,12 @@
 
 }
 .user{
-  width: 80vw;
+  display: flex;
   padding: 5rem 10rem;
 
+}
+.user-img{
+  border-radius: 40px;
 }
 #user{
   display: flex;

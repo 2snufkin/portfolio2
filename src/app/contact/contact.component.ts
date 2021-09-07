@@ -6,7 +6,6 @@ import {SaveService} from '../services/save.service';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogComponent} from '../dialog/dialog.component';
 import {Router} from '@angular/router';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -25,25 +24,23 @@ export class ContactComponent implements OnInit {
     this.name = userBackup?.name;
   }
 
-  onsubmit(form: NgForm) {
-    const email = form.value['email'];
-    const message = form.value['message'];
-    const subject = form.value['subject'];
+  onsubmit(form: NgForm): void {
+    const email = form.value.email;
+    const message = form.value.message;
+    const subject = form.value.subject;
     const send = new Mail(this.name, email, subject, message);
     const mailSend = JSON.parse(JSON.stringify(send));
-    this.fire.sendMail(mailSend) //change it to mailSend
-      .then(response => {
-        console.log(response.id);
-        console.log(response);
-        this.dialog.open(DialogComponent);
-        setTimeout(() => this.dialog.closeAll()
-          , 3000);
-        this.route.navigateByUrl('home');
+    this.fire.sendMail(mailSend)
+      .then((response: any) => {
+          this.dialog.open(DialogComponent);
+           setTimeout(() => {
+             this.dialog.closeAll();
+               this.route.navigateByUrl('about');
+             }
+      , 3000);
 
-      }).catch(err => console.log(`error has been done`));
-
-
-  }
+  }).catch( (error: any) => console.log("something isnt right with the sending of the email"))
+}
 
 
 }

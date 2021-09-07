@@ -11,7 +11,7 @@ export class PortfolioService {
   },
     {
       title: 'portfolio',
-      img: '../assets/placeholder.jpg'
+      img: '../assets/portfolio.png'
 
     },
     {

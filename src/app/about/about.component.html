@@ -1,14 +1,17 @@
-<div class="contain">
-
   <div class="me">
     <div class="me__title">
       <h1 class="headline"> {{title}}  </h1>
+<!--      <fa-icon [icon]=fas></fa-icon>-->
 
     </div>
     <div class="me__desc">
       <p class="desc">{{desc}}</p>
+      <ngtypewriter [StringList]='list' [speed]='5000' class="desc"></ngtypewriter>
+
+    </div>
+    <div class="me__pic">
+      <img src="{{img}}" alt="picture of me">
     </div>
               <!--  end user-->
 
-</div>    <!--end container-->
-
+  </div>
