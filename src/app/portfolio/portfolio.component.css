@@ -1,5 +1,11 @@
 .port-list{
   display: flex;
+ margin: 3rem;
   justify-content: space-between;
-  margin-top: 5rem;
+
+
+}
+.port-item{
+
+
 }

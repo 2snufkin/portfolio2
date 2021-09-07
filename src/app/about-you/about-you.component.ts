@@ -35,10 +35,11 @@ export class AboutYouComponent implements OnInit {
   }
 
   onSave(): void {
+    // create a user object
     const user = new User(this.name, this.age, this.pro, this.sex);
-    if (this.sex !== null) {
-      this.sex = (this.sex === 'male') ? 'assets/man.png' : 'assets/woman.png';
-    }
+    // if (this.sex !== null) {
+    //   this.sex = (this.sex === 'male') ? 'assets/man.png' : 'assets/woman.png';
+    // }
     this.saveService.persistData(user);
     this.show = false;
   }

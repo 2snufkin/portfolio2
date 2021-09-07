@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 $primary-color: #222831;
 $text-color: #393E46;
@@ -14,9 +15,11 @@ html, body {
 }
 
 body {
-  background-image:
-       url("assets/back-opaci.png" ) ;
- color: rgba(9, 162, 255, 0.9);
+  //background-image: url("assets/back-img.png" ) ;
+
+
+
+
   margin: 0;
   font-family: Roboto,
   "Helvetica Neue", sans-serif;
@@ -32,23 +35,21 @@ body {
   /* This is what makes the background image rescale based on its container's size */
   background-size: cover;
 
-  /* Pick a solid background color that will be displayed while the background image is loading */
-  background-color:white;
 
 
 
 }
 
 .headline {
-  font-family: 'Inconsolata', monospace !important;
+  font-family: 'Special Elite', cursive !important;
 
-  color: $head;
+  color: $secondary-color;
   font-size: 3.5rem !important;;
 
 }
 
 .desc {
-  font-family: 'Inconsolata', monospace !important;
+  font-family: 'Special Elite', cursive !important;
 
   font-size: 2rem;
   line-height: 3rem;

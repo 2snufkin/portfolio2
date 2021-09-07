@@ -1,0 +1,23 @@
+browsing animation
+nav service: create a method that get a string (skills) and return uts ID
+another method that get current and next string and return 'left' or 'right" = the navigation direction
+test it
+in the nav
+1. Import ActivatedRoute and ParamMap to your component.
+2. Inject an instance of ActivatedRoute by adding it to your application's constructor:
+3. Update the ngOnInit() method to access the ActivatedRoute and track the id parameter:
+ngOnInit() {
+  this.route.queryParams.subscribe(params => {
+    this.name = params['name'];
+  });
+}
+A router outlet emits an activate event when a new component is instantiated, and a deactivate event when a component is destroyed.
+<router-outlet
+  (activate)='onActivate($event)'
+  (deactivate)='onDeactivate($event)'></router-outlet>
+
+//while clicking on a link
+1. extreact the link id
+2. extract the current ID
+3. use the nav servbice to decide the direction
+4. transfer this info dynamicaly to the router module

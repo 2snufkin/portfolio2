@@ -1,11 +1,12 @@
-.contain{
-  display: flex;
-  flex-direction: column;
-  padding: 10rem 10rem;
-
+.me{
+  padding:6rem;
 }
-.me {
-  width: 80vw;
+.me__desc{
+  width: 50%;
 
 }
 
+img{
+  border: #00ADB5 10px solid;
+  border-radius: 13rem;
+ }
